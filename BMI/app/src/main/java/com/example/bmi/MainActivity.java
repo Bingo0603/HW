@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView txvShow;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 // 检查身高和體重是否大於0
                 if (height <= 0 || weight <= 0) {
-                    Toast.makeText(this, "身高和体重必须大於0", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "身高和體重必须大於0", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -60,7 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "请输入有效的身高和體重", Toast.LENGTH_SHORT).show();
             }
         } else {
-            edtHeight.setText("0");
-            edtWeight.setText("0");
+            edtHeight.setText(" ");
+            edtWeight.setText(" ");
             txvShow.setText("");
+        }
+    }
 }
